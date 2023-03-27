@@ -6,6 +6,8 @@ You need docker and docker-compose installed on your machine.
 - Run `./vendor/bin/sail up` to start the containers
 - Run `./vendor/bin/sail artisan migrate` to run the migrations
 - Run `./vendor/bin/sail php artisan queue:listen` to start the queue worker 
+- You can now access the application on `http://localhost`
+- You can access the meilisearch dashboard on `http://localhost:7700/`
 
 ## API Endpoints
 The postman collection is available in the **postman** directory of the project.
