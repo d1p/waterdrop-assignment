@@ -37,7 +37,7 @@ class DogControllerTest extends TestCase
             ]
         ]);
 
-        $response = $this->json('GET','/api/dogs',[] ,[
+        $response = $this->json('GET','/api/listdogs',[] ,[
             'Authorization' => 'Bearer ' . env('AUTH_TOKEN'),
         ]);
 
@@ -70,7 +70,7 @@ class DogControllerTest extends TestCase
             ]
         ]);
 
-        $response = $this->json('GET','/api/dogs',[] ,[
+        $response = $this->json('GET','/api/listdogs',[] ,[
         ]);
 
         $response->assertStatus(403);

@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::controller(DogController::class)->group(function () {
     Route::post('/adddog', 'addDog');
-    Route::get('/dogs', 'getDogs');
+    Route::get('/listdogs', 'getDogs');
 });
