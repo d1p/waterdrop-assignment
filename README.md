@@ -20,6 +20,8 @@ The postman collection is available in the **postman** directory of the project.
 - Use JSONB column type for the `data` column of the `dogs` table to improve the performance.
 - Add index on the `name` key of the `dogs` table `data` column to improve the performance. (After the above improvement)
 - Right now testing is not possible for the `GET` methods of the `DogController` because it uses `Laravel\Scout\Searchable` trait. It seems like I need to install custom scout driver for testing (https://github.com/Sti3bas/laravel-scout-array-driver). I will be happy to discuss it with you.
+- Follow OpenAPI specification to create the API specification.
+- Add more tests for the API endpoints.
 
 ## Thoughts
 - Currently, the required data on dogs are unknown, by knowing the required data, we can normalize the data and store it in a separate table. This will improve the performance of the application. (Example: breed, color, age, etc.)
