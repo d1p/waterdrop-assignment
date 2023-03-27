@@ -261,7 +261,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1/api/dogs",
+					"raw": "http://127.0.0.1/api/listdogs",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -271,7 +271,7 @@
 					],
 					"path": [
 						"api",
-						"dogs"
+						"listdogs"
 					]
 				}
 			},
@@ -282,7 +282,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1/api/dogs",
+							"raw": "http://127.0.0.1/api/listdogs",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -292,7 +292,7 @@
 							],
 							"path": [
 								"api",
-								"dogs"
+								"listdogs"
 							]
 						}
 					},
@@ -352,7 +352,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1/api/dogs?page=2",
+					"raw": "http://127.0.0.1/api/listdogs?page=2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -362,7 +362,7 @@
 					],
 					"path": [
 						"api",
-						"dogs"
+						"listdogs"
 					],
 					"query": [
 						{
@@ -379,7 +379,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1/api/dogs?page=2",
+							"raw": "http://127.0.0.1/api/listdogs?page=2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -389,7 +389,7 @@
 							],
 							"path": [
 								"api",
-								"dogs"
+								"listdogs"
 							],
 							"query": [
 								{
@@ -455,7 +455,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1/api/dogs?search=lucy",
+					"raw": "http://127.0.0.1/api/listdogs?search=lucy",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -465,7 +465,7 @@
 					],
 					"path": [
 						"api",
-						"dogs"
+						"listdogs"
 					],
 					"query": [
 						{
@@ -482,7 +482,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1/api/dogs?name=lucy",
+							"raw": "http://127.0.0.1/api/listdogs?name=lucy",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -492,7 +492,7 @@
 							],
 							"path": [
 								"api",
-								"dogs"
+								"listdogs"
 							],
 							"query": [
 								{
@@ -551,6 +551,34 @@
 					"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"data\": {\n                \"name\": \"Lucy\"\n            },\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 9,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"id\": 29,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T19:21:44.000000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 49,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T19:28:43.000000Z\",\n            \"updated_at\": null\n        },\n        {\n            \"id\": 254,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T21:05:30.000000Z\",\n            \"updated_at\": \"2023-03-27T21:05:30.000000Z\"\n        },\n        {\n            \"id\": 283,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T21:16:41.000000Z\",\n            \"updated_at\": \"2023-03-27T21:16:41.000000Z\"\n        },\n        {\n            \"id\": 303,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T21:21:21.000000Z\",\n            \"updated_at\": \"2023-03-27T21:21:21.000000Z\"\n        },\n        {\n            \"id\": 323,\n            \"data\": {\n                \"name\": \"Lucy\",\n                \"breed\": \"Golden Retriever\",\n                \"age\": 2,\n                \"color\": \"blonde\"\n            },\n            \"created_at\": \"2023-03-27T21:22:40.000000Z\",\n            \"updated_at\": \"2023-03-27T21:22:40.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1/api/dogs?query=lucy&page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1/api/dogs?query=lucy&page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1/api/dogs?query=lucy&page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1/api/dogs\",\n    \"per_page\": 30,\n    \"prev_page_url\": null,\n    \"to\": 8,\n    \"total\": 8\n}"
 				}
 			]
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/listdogs?name=lucy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"listdogs"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lucy"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
