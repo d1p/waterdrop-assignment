@@ -13,7 +13,7 @@ class Auth
         $token = str_replace('Bearer ', '', $bearerToken);
 
         if (env('AUTH_TOKEN') !== $token) {
-            abort(401);
+            abort(403);
         }
         return $next($request);
     }

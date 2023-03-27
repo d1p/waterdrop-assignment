@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessDogs;
 use App\Models\Dog;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 
 class DogController extends Controller
 {
+    use DispatchesJobs;
+
     public function addDog(Request $request)
     {
         # load the json data from the request
@@ -17,27 +21,18 @@ class DogController extends Controller
             ], 400);
         }
 
-        // insert the data into the database
-        $formatted_data = [];
-        foreach ($dogs as $dog) {
-            $formatted_data[] = [
-                'data' => json_encode($dog),
-                'created_at' => now(),
-            ];
-        }
-
-        Dog::insert($formatted_data);
+        // dispatch the job to process the data
+        $this->dispatch(new ProcessDogs($dogs))->delay(now()->addSeconds(10));
 
         return response()->json([
-            'message' => 'Dog added successfully',
-            'dog' => $dogs
+            'message' => 'Dog added successfully'
         ]);
     }
 
     public function getDogs(Request $request)
     {
         // take the search query from the request
-        $search_query = $request->query('search');
+        $search_query = $request->query('name');
         $dogs = Dog::search($search_query)->paginate(30);
         return response()->json(
             $dogs
