@@ -8,6 +8,8 @@ You need docker and docker-compose installed on your machine.
 - Run `./vendor/bin/sail php artisan queue:listen` to start the queue worker 
 - You can now access the application on `http://localhost`
 - You can access the meilisearch dashboard on `http://localhost:7700/`
+- You need to create an index in the meilisearch dashboard with the name `dogs_index` and the primary key `id` there is a postman example for that.
+- Optionally, you can also add the index by create a new dog object in the application.
 
 ## API Endpoints
 The postman collection is available in the **postman** directory of the project.

@@ -33,7 +33,13 @@ class DogController extends Controller
     {
         // take the search query from the request
         $search_query = $request->query('name');
-        $dogs = Dog::search($search_query)->paginate(30);
+
+        try {
+            $dogs = Dog::search($search_query)->paginate(30);
+        } catch (\Meilisearch\Exceptions\ApiException) {
+            logger("There is no index for dogs yet. Creating one using meilisearch dashboard or create a new dog to create one.");
+            return response()->json(["message" => "No meilisearch index created yet."], 500);
+        }
         return response()->json(
             $dogs
         );
